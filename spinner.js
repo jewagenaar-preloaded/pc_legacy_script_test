@@ -11,7 +11,7 @@ pc.script.create("spinner", function (app) {
         },
 
         update: function (dt) {
-        	this.entity.rotate(0, this.speed * dt, 0);
+        	this.entity.rotate(this.speed * dt, 0, 0);
         }
     };
 
