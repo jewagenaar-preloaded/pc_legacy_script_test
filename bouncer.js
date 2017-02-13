@@ -8,7 +8,7 @@ pc.script.create("bouncer", function (app) {
         this.direction = 1;
     };
 
-    Spinner.prototype = {
+    Bouncer.prototype = {
         initialize: function () {
 
         },
@@ -27,7 +27,6 @@ pc.script.create("bouncer", function (app) {
                 this.direction = -this.direction;
                 this.offset = -this.distance;
             }
-
 
         	this.entity.setLocalPosition(0, this.offset, 0);
         }
