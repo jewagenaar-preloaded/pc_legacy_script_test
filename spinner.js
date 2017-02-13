@@ -1,11 +1,17 @@
-var Spinner = pc.createScript('spinner');
+pc.script.create("spinner", function (app) {
+    var ScriptObject = function (entity) {
+        this.entity = entity;
+    };
 
-// initialize code called once per entity
-Spinner.prototype.initialize = function() {
-    
-};
+    ScriptObject.prototype = {
+        initialize: function () {
 
-// update code called every frame
-Spinner.prototype.update = function(dt) {
-	this.entity.rotate(0, 1 * dt, 0);
-};
+        },
+
+        update: function (dt) {
+        	this.entity.rotate(0, 1*dt, 0);
+        }
+    };
+
+    return ScriptObject;
+});
